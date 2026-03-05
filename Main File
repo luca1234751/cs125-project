@@ -8,6 +8,19 @@ CS125 Group Project
 #include<time.h>
 
 int main(){
-  printf("Hello World"); 
+  int kingdom;
+  printf("Welcome to _________ Land\n As a _____ you have the opportunity to join one of three kingdoms!\n Your options are the following:\n 1) _______\n2) _______\n3) _____\nPress 1, 2, or 3 to choose your kingdom: ");
+  rc=scanf("%d", &kingdom);
+  //check for correct input function
+  if (kingdom==1){
+
+  }
+  else if (kingdom==2){
+
+  }
+  else if (kingdom==3){
+
+  }
+  printf
   return 0;
 }
