@@ -20,8 +20,20 @@ int main(){
   }
   else if (kingdom==3){
   
+  int kingdom;
+  srand(time(NULL));
+  printf("Welcome to _________ Land\n As a traveler you have the opportunity to explore the land!\n" Your options are the following:\n 1) _______\n2) _______\n3) _____\nPress 1, 2, or 3 to choose your kingdom: ");
+  rc = scanf("%d", &kingdom);
+  //check for correct input function
+  if (kingdom == 1){
+
   }
-  printf
+  else if (kingdom == 2){
+
+  }
+  else if (kingdom == 3){
+
+  }
   return 0;
 }
 /*
@@ -30,7 +42,7 @@ b is the variable you assign in the scanf statement ex. scanf(%d, &b);
 j is the max the user can input ex. 0 -> j
 */
 void errorCheck(int a, int *b, int j){
-  while((!a)||(*b<0)||(*b>=j)){
+  while((!a) || (*b < 0) || (*b >= j)){
     scanf("%*s");
     printf("Please try again: ");
     a = scanf("%d", b);
