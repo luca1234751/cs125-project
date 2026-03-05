@@ -9,19 +9,19 @@ CS125 Group Project
 
 int main(){
   int kingdom;
-  printf("Welcome to _________ Land\n As a _____ you have the opportunity to join one of three kingdoms!\n Your options are the following:\n 1) _______\n2) _______\n3) _____\nPress 1, 2, or 3 to choose your kingdom: ");
-  rc=scanf("%d", &kingdom);
+  srand(time(NULL));
+  printf("Welcome to _________ Land\n As a traveler you have the opportunity to explore the land!\n" Your options are the following:\n 1) _______\n2) _______\n3) _____\nPress 1, 2, or 3 to choose your kingdom: ");
+  rc = scanf("%d", &kingdom);
   //check for correct input function
-  if (kingdom==1){
+  if (kingdom == 1){
 
   }
-  else if (kingdom==2){
+  else if (kingdom == 2){
 
   }
-  else if (kingdom==3){
+  else if (kingdom == 3){
 
   }
-  printf
   return 0;
 }
 /*
@@ -29,9 +29,8 @@ a should be the rc variable either 1 or 0 whether or not the scanf worked
 b is the variable you assign in the scanf statement ex. scanf(%d, &b);
 j is the max the user can input ex. 0 -> j
 */
-ojisbhfiusbhdfouibhwOFIJNBAD;OIVFHNRAWOI
 void errorCheck(int a, int *b, int j){
-  while((!a)||(*b<0)||(*b>=j)){
+  while((!a) || (*b < 0) || (*b >= j)){
     scanf("%*s");
     printf("Please try again: ");
     a = scanf("%d", b);
