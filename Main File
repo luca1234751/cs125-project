@@ -6,11 +6,13 @@ CS125 Group Project
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
+#include<stdbool.h> 
 
+int *x = 100;
 int main(){
   int choice;
   srand(time(NULL));
-  printf("Welcome to _________ Land\n As a traveler you have the opportunity to explore the land!\n" Your options are the following:\n 1) _______\n2) _______\n3) _____\nPress 1, 2, or 3 to choose your kingdom: ");
+  printf("Welcome to _________ Land\n As a traveler you have the opportunity to explore the land!\n Your options are the following:\n 1) _______\n2) _______\n3) _____\nPress 1, 2, or 3 to choose your kingdom: ");
   rc = scanf("%d", &choice);
   errorCheck(rc, &choice, 3);
   if (choice == 1){
