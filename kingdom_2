@@ -1,0 +1,3 @@
+int kingdom_2{
+printf("Welcome to Nick's Kingdom!");
+}
