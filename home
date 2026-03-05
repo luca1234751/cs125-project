@@ -1,3 +1,6 @@
 int home{
-printf("Welcome to the Common Place!");
+int choice;
+printf("Welcome to the Common Place!\nGold Coins: %d\nWhere would you like to go?\nDillon's Bakery (1)\nSophie's Tavern (2)\nCarlos's Blacksmith (3)\nExplore a Different Land (4)\nContinue on your Travels/Leave (5)/n", x);
+rc=scanf("%d", &choice);
+
 }
