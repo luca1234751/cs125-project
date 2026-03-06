@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int home{
   int choice, rc;
   printf("Welcome to the Common Place!\nGold Coins: %d\nWhere would you like to go?\nDillon's Bakery (1)\nSophie's Tavern (2)\nCarlos's Blacksmith (3)\nExplore a Different Land (4)\nContinue on your Travels/Leave (0)/n", x);
@@ -15,7 +17,7 @@ int home{
     if (bakery_choice = 1){
       int buy, rc;
       printf("You chose to buy some bread. Bread costs 15 ____.\nConfirm your purchase (1)\nReturn back to the Common Place (0)");
-      rc = scanf("%d"", &buy);
+      rc = scanf("%d", &buy);
       errorCheck(rc, buy, 1);
       if (buy = 1){
         printf("That Bread was delicious!\nLet's head back to the Common Place and explore some more.\n");
