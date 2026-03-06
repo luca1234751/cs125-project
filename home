@@ -2,12 +2,16 @@
 
 int home{
   int choice, rc;
-  printf("Welcome to the Common Place!\nGold Coins: %d\nWhere would you like to go?\nDillon's Bakery (1)\nSophie's Tavern (2)\nCarlos's Blacksmith (3)\nExplore a Different Land (4)\nContinue on your Travels/Leave (0)/n", x);
+  printf("Welcome to the Common Place!\nGold Coins: %d\n", x);
+  sleep(2);
+  printf("Where would you like to go?\nDillon's Bakery (1)\nSophie's Tavern (2)\nCarlos's Blacksmith (3)\nExplore a Different Land (4)\nContinue on your Travels/Leave (0)/n");
   rc = scanf("%d", &choice);
   errorCheck(rc, choice, 4);
   if (choice == 1){
     int bakery_choice;
-    printf("You chose to go to Dillon's Bakery./nIt smells delicious! Would you like to: \nBuy some bread (1)\nTalk to the Bakery Helper (2)\nReturn to the Common Place (0)");
+    printf("You chose to go to Dillon's Bakery./nIt smells delicious!\n"); 
+    sleep(2);
+    printf("Would you like to: \nBuy some bread (1)\nTalk to the Bakery Helper (2)\nReturn to the Common Place (0)");
     rc = scanf("%d"", &bakery_choice);
     errorCheck(rc, bakery_choice, 4);
     if (bakery_choice = 0){
@@ -43,7 +47,9 @@ int home{
       return 1;
     }
     printf("You got lucky this time. The bouncer Ben lets you inside.");
-    printf("The place is crowded. Would you like to: \nBuy a drink (1)\nTalk to _____ (2)\nReturn to the Common Place (0)");
+    printf("The place is crowded.\n");
+    sleep(2);
+    printf("Would you like to: \nBuy a drink (1)\nTalk to _____ (2)\nReturn to the Common Place (0)");
     rc = scanf("%d", &tavern_choice);
     errorCheck(rc, tavern_choice, 2);
     if (tavern_choice = 0){
@@ -72,7 +78,9 @@ int home{
   }
   else if (choice = 3){
     int buy_blacksmith, weapon_choice, buy_weapon;
-    printf("You chose to go to Carlos's Blacksmith.\n Would you like to: \nPurchase a weapon (1)\nReturn back to the Common Place (0)");
+    printf("You chose to go to Carlos's Blacksmith.\n");
+    sleep(2);
+    printf("Would you like to: \nPurchase a weapon (1)\nReturn back to the Common Place (0)");
     rc = scanf("%d", &buy_blacksmith);
     errorCheck(rc, buy_blacksmith, 1);
     if (buy_blacksmith = 1){
