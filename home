@@ -15,22 +15,58 @@ int home{
       return 1;
     }
     if (bakery_choice = 1){
-      int buy, rc;
+      int buy_bread, rc;
       printf("You chose to buy some bread. Bread costs 15 ____.\nConfirm your purchase (1)\nReturn back to the Common Place (0)");
-      rc = scanf("%d", &buy);
-      errorCheck(rc, buy, 1);
-      if (buy = 1){
+      rc = scanf("%d", &buy_bread);
+      errorCheck(rc, buy_bread, 1);
+      if (buy_bread = 1){
         printf("That Bread was delicious!\nLet's head back to the Common Place and explore some more.\n");
         *x-=15;
         return 1;
       }
-      if (buy = 0){
+      if (buy_bread = 0){
         printf("Alright, your missing out!\nLet's head back to the Common Place and explore some more.\n");
         return 1;
       }
     }
     if (bakery_choice = 2){
-      printf("You chose to talk to the Bakery Helper.\n______________________dialogue_________________________Let's head back to the Common Place and explore some more.\n")
+      printf("You chose to talk to the Bakery Helper.\n______________________dialogue_________________________\nLet's head back to the Common Place and explore some more.\n")
+      return 1;
+    }
+  }
+  if (choice = 2){
+    int rc, bounced, tavern_choice;
+    printf("You chose to go to Sophie's Tavern./n On the way in, the bouncer Ben walks up to you./n")
+    bounced = rand()%2
+    if (bounced = 1){
+      printf("Uh Oh, you got bounced by Ben the bouncer.\nBack to the Common Place it is.\n");
+      return 1;
+    }
+    printf("You got lucky this time. The bouncer Ben lets you inside.");
+    printf("The place is crowded. Would you like to: \nBuy a drink (1)\nTalk to _____ (2)\nReturn to the Common Place (0)");
+    rc = scanf("%d", &tavern_choice);
+    errorCheck(rc, tavern_choice, 2);
+    if (tavern_choice = 0){
+      printf("You chose to return to the Common Place.")
+      return 1;
+    }
+    if (tavern_choice = 1){
+      int buy_beer, rc;
+      printf("You chose to buy a drink. Beer costs 30 ____.\nConfirm your purchase (1)\nReturn back to the Common Place (0)");
+      rc = scanf("%d", &buy_beer);
+      errorCheck(rc, buy_beer, 1);
+      if (buy_beer = 1){
+        printf("That beer was delicious!\nLet's head back to the Common Place and explore some more.\n");
+        *x-=30;
+        return 1;
+      }
+      if (buy_beer = 0){
+        printf("Alright, your missing out!\nLet's head back to the Common Place and explore some more.\n");
+        return 1;
+      }
+    }
+    if (tavern_choice = 2){
+      printf("You chose to talk to _______.\n______dialogue______\nLet's head back to the Common Place and explore some more.\n");
       return 1;
     }
   }
