@@ -80,7 +80,8 @@ int home{
       rc = scanf("%d", &weapon choice);
       errorCheck(rc, weapon_choice, 3);
       if (weapon_choice = 0){
-        buy_blacksmith = 0;
+        printf("Alright, your missing out!\nLet's head back to the Common Place and explore some more.\n");
+        return 1;
       }
       else if (weapon_choice = 1){
         printf("You chose to buy a Sword! Great Choice! A Sword costs 55 Gold Coins\n");
