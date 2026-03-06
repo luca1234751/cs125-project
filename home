@@ -14,7 +14,7 @@ int home{
       printf("You chose to return to the Common Place.")
       return 1;
     }
-    if (bakery_choice = 1){
+    else if (bakery_choice = 1){
       int buy_bread;
       printf("You chose to buy some bread. Bread costs 15 ____.\nConfirm your purchase (1)\nReturn back to the Common Place (0)");
       rc = scanf("%d", &buy_bread);
@@ -24,17 +24,17 @@ int home{
         *x-=15;
         return 1;
       }
-      if (buy_bread = 0){
+      else if (buy_bread = 0){
         printf("Alright, your missing out!\nLet's head back to the Common Place and explore some more.\n");
         return 1;
       }
     }
-    if (bakery_choice = 2){
+    else if (bakery_choice = 2){
       printf("You chose to talk to the Bakery Helper.\n______________________dialogue_________________________\nLet's head back to the Common Place and explore some more.\n")
       return 1;
     }
   }
-  if (choice = 2){
+  else if (choice = 2){
     int bounced, tavern_choice;
     printf("You chose to go to Sophie's Tavern./n On the way in, the bouncer Ben walks up to you./n")
     bounced = rand()%2
@@ -50,7 +50,7 @@ int home{
       printf("You chose to return to the Common Place.")
       return 1;
     }
-    if (tavern_choice = 1){
+    else if (tavern_choice = 1){
       int buy_beer;
       printf("You chose to buy a drink. Beer costs 30 ____.\nConfirm your purchase (1)\nReturn back to the Common Place (0)");
       rc = scanf("%d", &buy_beer);
@@ -60,17 +60,17 @@ int home{
         *x-=30;
         return 1;
       }
-      if (buy_beer = 0){
+      else if (buy_beer = 0){
         printf("Alright, your missing out!\nLet's head back to the Common Place and explore some more.\n");
         return 1;
       }
     }
-    if (tavern_choice = 2){
+    else if (tavern_choice = 2){
       printf("You chose to talk to _______.\n______dialogue______\nLet's head back to the Common Place and explore some more.\n");
       return 1;
     }
   }
-  if (choice = 3){
+  else if (choice = 3){
     int buy_blacksmith, weapon_choice, buy_weapon;
     printf("You chose to go to Carlos's Blacksmith.\n Would you like to: \nPurchase a weapon (1)\nReturn back to the Common Place (0)");
     rc = scanf("%d", &buy_blacksmith);
@@ -82,13 +82,13 @@ int home{
       if (weapon_choice = 0){
         buy_blacksmith = 0;
       }
-      if (weapon_choice = 1){
+      else if (weapon_choice = 1){
         printf("You chose to buy a Sword! Great Choice! A Sword costs 55 Gold Coins\n");
       }
-      if (weapon_choice = 2){
+      else if (weapon_choice = 2){
         printf("You chose to buy a Battle Axe! Scary! A Battle Axe costs 50 Gold Coins\n");
       }
-      if (weapon_choice = 3){
+      else if (weapon_choice = 3){
         printf("You chose to buy a Spiked Club! Nice! A Spiked Club costs 45 Gold Coins\n");
       }
       printf("Confirm your purchase (1)\nReturn back to the Common Place (0)");
@@ -99,21 +99,23 @@ int home{
         if (weapon_choice = 1){
           *x-=55;
         }
-        if (weapon_choice = 2){
+        else if (weapon_choice = 2){
           *x-=50;
         }
-        if (weapon_choice = 3){
+        else if (weapon_choice = 3){
           *x-=45;
         }
         return 1;
       }
-      if (buy_weapon = 0){
+      else if (buy_weapon = 0){
         buy_blacksmith = 0;
       }
     }
-    if (buy_blacksmith = 0){
+    else if (buy_blacksmith = 0){
       printf("Alright, your missing out!\nLet's head back to the Common Place and explore some more.\n");
       return 1;
     }
+  }
+  else if(choice = 4){
   }
 }
