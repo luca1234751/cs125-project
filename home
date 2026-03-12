@@ -18,7 +18,7 @@ int home(){
     printf("You chose to go to Dillon's Bakery./nIt smells delicious!\n"); 
     sleep(2);
     printf("Would you like to: \nBuy some bread (1)\nTalk to the Bakery Helper (2)\nReturn to the Common Place (0)");
-    rc = scanf("%d"", &bakery_choice);
+    rc = scanf("%d", &bakery_choice);
     errorCheck(rc, &bakery_choice, 4);
     if (bakery_choice == 0){
       printf("You chose to return to the Common Place.")
