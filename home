@@ -12,14 +12,14 @@ int home(){
   sleep(2);
   printf("Where would you like to go?\nDillon's Bakery (1)\nSophie's Tavern (2)\nCarlos's Blacksmith (3)\nExplore a Different Land (4)\nContinue on your Travels/Leave (0)/n");
   rc = scanf("%d", &choice);
-  errorCheck(rc, choice, 4);
+  errorCheck(rc, &choice, 4);
   if (choice == 1){
     int bakery_choice;
     printf("You chose to go to Dillon's Bakery./nIt smells delicious!\n"); 
     sleep(2);
     printf("Would you like to: \nBuy some bread (1)\nTalk to the Bakery Helper (2)\nReturn to the Common Place (0)");
     rc = scanf("%d"", &bakery_choice);
-    errorCheck(rc, bakery_choice, 4);
+    errorCheck(rc, &bakery_choice, 4);
     if (bakery_choice == 0){
       printf("You chose to return to the Common Place.")
       return 1;
@@ -28,7 +28,7 @@ int home(){
       int buy_bread;
       printf("You chose to buy some bread. Bread costs 15 ____.\nConfirm your purchase (1)\nReturn back to the Common Place (0)");
       rc = scanf("%d", &buy_bread);
-      errorCheck(rc, buy_bread, 1);
+      errorCheck(rc, &buy_bread, 1);
       if (buy_bread == 1){
         printf("That Bread was delicious!\nLet's head back to the Common Place and explore some more.\n");
         *x-=15;
