@@ -8,7 +8,7 @@ CS125 Group Project
 #include <time.h>
 #include <stdbool.h> 
 #include "errorCheck.h"
-
+#include <unistd.h>
 int *x = 100;
 int main(){
   int choice;
