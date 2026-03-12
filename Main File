@@ -2,11 +2,12 @@
 CS125 Group Project
 ****/
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<time.h>
-#include<stdbool.h> 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stdbool.h> 
+#include "errorCheck.h"
 
 int *x = 100;
 int main(){
@@ -16,7 +17,7 @@ int main(){
   rc = scanf("%d", &choice);
   errorCheck(rc, &choice, 3);
   if (choice == 1){
-
+    home();
   }
   else if (choice == 2){
 
