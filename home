@@ -123,7 +123,8 @@ int home(){
         return 1;
       }
       else if (buy_weapon == 0){
-        buy_blacksmith = 0;
+        printf("Alright, your missing out!\nLet's head back to the Common Place and explore some more.\n");
+        return 1;
       }
     }
     else if (buy_blacksmith == 0){
