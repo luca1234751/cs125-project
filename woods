@@ -1,3 +1,5 @@
 int woods{
   printf("Welcome to the Woods!");
+  printf("You have found a map conviniently placed by a log!!\nThe map shows you different areas of the woods and places to explore.");
+  printf("There map shows two main structures, a mysterious hut and a looming tower.\nWhere would you like to go: 1. 
 }
