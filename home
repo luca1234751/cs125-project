@@ -17,7 +17,7 @@ int home(){
     int bakery_choice;
     printf("You chose to go to Dillon's Bakery.\nIt smells delicious!\n"); 
     sleep(2);
-    printf("Would you like to: \nBuy some bread (1)\nTalk to the Bakery Helper (2)\nReturn to the Common Place (0)");
+    printf("Would you like to: \nBuy some bread (1)\nTalk to the Bakery Helper (2)\nReturn to the Common Place (0)\n");
     rc = scanf("%d", &bakery_choice);
     bakery_choice = errorCheck(rc, bakery_choice, 4);
     if (bakery_choice == 0){
@@ -26,7 +26,7 @@ int home(){
     }
     else if (bakery_choice == 1){
       int buy_bread;
-      printf("You chose to buy some bread. Bread costs 15 ____.\nConfirm your purchase (1)\nReturn back to the Common Place (0)");
+      printf("You chose to buy some bread. Bread costs 15 ____.\nConfirm your purchase (1)\nReturn back to the Common Place (0)\n");
       rc = scanf("%d", &buy_bread);
       buy_bread = errorCheck(rc, buy_bread, 1);
       if (buy_bread == 1){
