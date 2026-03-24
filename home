@@ -90,7 +90,7 @@ int home(){
     rc = scanf("%d", &buy_blacksmith);
     buy_blacksmith = errorCheck(rc, buy_blacksmith, 1);
     if (buy_blacksmith == 1){
-      printf("You chose to buy a weapon. Carlos greets you and provides you with 3 weapon options. Would you like to: \nBuy a Sword (1)\nBuy a Battle Axe (2)\nBuy a Spiked Club (3)\n Return to the Common Place (0)\n");
+      printf("You chose to buy a weapon. Carlos greets you and provides you with 3 weapon options. Would you like to: \nBuy a Sword (1)\nBuy a Battle Axe (2)\nBuy a Spiked Club (3)\nReturn to the Common Place (0)\n");
       rc = scanf("%d", &weapon_choice);
       weapon_choice = errorCheck(rc, weapon_choice, 3);
       if (weapon_choice == 0){
