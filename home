@@ -137,7 +137,7 @@ int home(){
     printf("You chose to explore a different Land.\nWhere would you like to go?\n");
     sleep(2);
     printf("Tiffany's Kingdom (1)\nNick's Kingdom (2)\nThe Rafferty Kingdom (3)\nThe Woods (4)\n");
-    rc = scanf("%d", &choice);
+    rc = scanf("%d", &explore_choice);
     choice = errorCheck(rc, choice, 4);
     if (explore_choice == 1){
       return 2;
