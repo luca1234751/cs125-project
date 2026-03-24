@@ -1,7 +1,3 @@
-/****
-CS125 Group Project
-****/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,34 +5,41 @@ CS125 Group Project
 #include <stdbool.h> 
 #include "errorCheck.h"
 #include <unistd.h>
+
+void errorCheck(int a, int *b, int j){
+  while ((!a) || (*b < 0) || (*b >= j)){
+    scanf("%*s");
+    printf("Please try again: ");
+    a = scanf("%d", b);
+}
+
 int *x = 100;
+
 int main(){
   int choice;
   srand(time(NULL));
-  printf("Welcome to _________ Land\n As a traveler you have the opportunity to explore the land!\n Your options are the following:\n 1) _______\n2) _______\n3) _____\nPress 1, 2, or 3 to choose your kingdom: ");
-  rc = scanf("%d", &choice);
-  errorCheck(rc, &choice, 3);
-  if (choice == 1){
-    home();
+  printf("Welcome message ...");
+  choice = home();
+  while (choice != 0){
+    if (choice = 1){
+      choice = home();
+    }
+    else if (choice = 2){
+      choice = kingdom1();
+    }
+    else if (choice = 3){
+      choice = kingdom2();
+    }
+    else if (choice = 4){
+      choice = kingdom3();
+    }
+    else{
+      choice = woods();
+    }
   }
-  else if (choice == 2){
-
-  }
-  else if (choice == 3){
-
+  if (choice = 0){
+    printf("Goodbye message ...");
+    return 0;
   }
   return 0;
-}
-/*
-a should be the rc variable either 1 or 0 whether or not the scanf worked
-b is the variable you assign in the scanf statement ex. scanf(%d, &b);
-j is the max the user can input ex. 0 -> j
-*/
-int errorCheck(int a, int *b, int j){
-  while((!a) || (b < 0) || (b >= j)){
-    scanf("%*s");
-    printf("Please try again: ");
-    a = scanf("%d", &b);
-  }
-  return b;
 }
