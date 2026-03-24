@@ -46,7 +46,7 @@ int home(){
   }
   else if (choice == 2){
     int bounced, tavern_choice;
-    printf("You chose to go to Sophie's Tavern./n On the way in, the bouncer Ben walks up to you./n");
+    printf("You chose to go to Sophie's Tavern.\n On the way in, the bouncer Ben walks up to you.\n");
     bounced = rand()%2;
     if (bounced == 1){
       printf("Uh Oh, you got bounced by Ben the bouncer.\nBack to the Common Place it is.\n");
