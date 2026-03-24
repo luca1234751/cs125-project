@@ -6,11 +6,15 @@
 #include "errorCheck.h"
 #include <unistd.h>
 
-void errorCheck(int a, int *b, int j){
-  while ((!a) || (*b < 0) || (*b > j)){
-    scanf("%*s");
+int errorCheck(int a, int b, int j){
+  while ((!a) || (b < 0) || (b > j)){
+    if (!a){
+      scanf("%*s");
+    }
     printf("Please try again: ");
     a = scanf("%d", &b);
+  }
+  return b;
 }
 
 int *x = 100;
