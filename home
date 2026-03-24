@@ -147,7 +147,7 @@ int home(){
     if (explore_choice == 3){
       return 4;
     }
-    if (explore_choice==1){
+    if (explore_choice==4){
       return 5;
     }
   }
