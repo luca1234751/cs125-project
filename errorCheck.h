@@ -7,3 +7,4 @@ int woods();
 extern int currency;
 extern int i;
 extern char printLine;
+extern bool visited_gala;
