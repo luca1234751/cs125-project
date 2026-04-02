@@ -1,2 +1,2 @@
-void errorCheck(int a, int *b, int j);
+void errorCheck(int a, int b, int j);
 int home();
