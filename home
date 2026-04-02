@@ -40,7 +40,12 @@ int home(){
       }
     }
     else if (bakery_choice == 2){
-      printf("You chose to talk to the Bakery Helper.\n______________________dialogue_________________________\nLet's head back to the Common Place and explore some more.\n");
+      printf("You chose to talk to the Bakery Helper.\nYou walk up to the Bakery Helper and say Hello\n");
+      sleep(1)
+      printf("She says: \nHello, my name is Elyse! I hope you are doing well! Doesn't the bread here smell so good?\nIf you haven't yet bought any, I would highly recommend!\n");
+      sleep(1)
+      printf("\nShe seems to be a bit sad.
+\nLet's head back to the Common Place and explore some more.\n");
       return 1;
     }
   }
