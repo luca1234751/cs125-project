@@ -9,6 +9,7 @@
 int kingdom1(){
   int choice, rc;
   printf("Welcome to Tiffany's Kingdom!\nGold Coins: %d\n", x);
+  
   sleep(2);
   printf("Where would you like to go?\nThe Dungeon (1)\nThe Throne Room (2)\nExplore a Different Land (3)\nContinue on your Travels/Leave (0)\n");
   rc = scanf("%d", &choice);
@@ -59,7 +60,7 @@ int kingdom1(){
     sleep(2);
     printf("The Common Land (1)\nNick's Kingdom 2 (2)\nThe Rafferty Kingdom (3)\nThe Woods (4)\n");
     rc = scanf("%d", &explore_choice);
-    explore_choice = errorCheck(rc, &explore_choice, 4);
+    explore_choice = errorCheck(rc, explore_choice, 4);
     if (explore_choice == 1){
       return 1;
     }
