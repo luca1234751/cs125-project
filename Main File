@@ -25,16 +25,16 @@ int main(){
   printf("Welcome message ...");
   choice = home();
   while (choice != 0){
-    if (choice = 1){
+    if (choice == 1){
       choice = home();
     }
-    else if (choice = 2){
+    else if (choice == 2){
       choice = kingdom1();
     }
-    else if (choice = 3){
+    else if (choice == 3){
       choice = kingdom2();
     }
-    else if (choice = 4){
+    else if (choice == 4){
       choice = kingdom3();
     }
     else{
