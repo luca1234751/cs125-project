@@ -17,7 +17,7 @@ int errorCheck(int a, int b, int j){
   return b;
 }
 
-int *x = 100;
+int x = 100;
 
 int main(){
   int choice;
