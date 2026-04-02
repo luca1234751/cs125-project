@@ -26,7 +26,7 @@ int home(){
     }
     else if (bakery_choice == 1){
       int buy_bread;
-      printf("You chose to buy some bread. Bread costs 15 ____.\nConfirm your purchase (1)\nReturn back to the Common Place (0)\n");
+      printf("You chose to buy some bread. Bread costs 15 Gold Coins.\nConfirm your purchase (1)\nReturn back to the Common Place (0)\n");
       rc = scanf("%d", &buy_bread);
       buy_bread = errorCheck(rc, buy_bread, 1);
       if (buy_bread == 1){
@@ -64,7 +64,7 @@ int home(){
     }
     else if (tavern_choice == 1){
       int buy_beer;
-      printf("You chose to buy a drink. Beer costs 30 ____.\nConfirm your purchase (1)\nReturn back to the Common Place (0)");
+      printf("You chose to buy a drink. Beer costs 30 Gold Coins.\nConfirm your purchase (1)\nReturn back to the Common Place (0)");
       rc = scanf("%d", &buy_beer);
       buy_beer = errorCheck(rc, buy_beer, 1);
       if (buy_beer == 1){
