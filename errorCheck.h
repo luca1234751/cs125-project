@@ -5,3 +5,5 @@ int kingdom2();
 int kingdom3();
 int woods();
 extern int currency;
+extern int i;
+extern char printLine;
