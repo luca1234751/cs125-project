@@ -19,6 +19,8 @@ int errorCheck(int a, int b, int j){
 
 int currency = 100;
 
+int i;
+
 int main(){
   int choice;
   srand(time(NULL));
