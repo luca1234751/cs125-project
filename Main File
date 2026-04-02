@@ -20,6 +20,7 @@ int errorCheck(int a, int b, int j){
 int currency = 100;
 
 int i;
+char printLine[200];
 
 int main(){
   int choice;
