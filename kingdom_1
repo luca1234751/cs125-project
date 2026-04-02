@@ -9,13 +9,7 @@
 int kingdom1(){
   int choice, rc;
   printf("Welcome to Tiffany's Kingdom!\nGold Coins: %d\n", currency);
-  FILE* art = fopen("art.txt","r");
-  for(i=0; i<22; i++){
-    fgets(printLine, 200, art);
-    printf("%s", printLine);
-  }
-  printf("\n");
-  fclose(art);
+  
   sleep(2);
   printf("Where would you like to go?\nThe Dungeon (1)\nThe Throne Room (2)\nExplore a Different Land (3)\nContinue on your Travels/Leave (0)\n");
   rc = scanf("%d", &choice);
@@ -23,16 +17,6 @@ int kingdom1(){
   if (choice == 1){
     int dungeon_choice;
     printf("Welcome to the Royal Dungeon!\n");
-    FILE* art = fopen("art.txt","r");
-    for(i=0; i<106; i++){
-      fgets(printLine, 200, art);
-    }
-    for(i=107; i<128; i++){
-      fgets(printLine, 200, art);
-      printf("%s", printLine);
-    }
-    printf("\n");
-    fclose(art);
     sleep(2);
     printf("Would you like to: \nSpeak to the Dungeon Master (1)\nSpeak to the prisoner (2)\nReturn to Tiffany's Kingdom centre (0)");
     rc = scanf("%d", &dungeon_choice);
@@ -42,11 +26,23 @@ int kingdom1(){
       return 2;
     }
     else if (dungeon_choice == 1){
-      printf("TEXT");
+      int question_choice;
+      printf("You approach Ariela, the Dungeon Master. You ask her a question.\n");
+      printf("How long have you worked here? (1)\nHow many prisoners are there? (2)\n");
+      rc = scanf("%d", &question_choice);
+      question_choice = errorCheck(rc, question_choice, 2);
+      if (question_choice == 1){
+        printf("\"Like 67 years\"\nShe does a strange hand signal. You walk away...\n");
+      }
+      else if (question_choice == 2){
+        printf("I think about 6 or 7\nShe laughs and you look around. There is only 1 prisoner...\n");
+      }
       return 2;
     }
     else if (dungeon_choice == 2){
-      printf("TEXT");
+      printf("You walk over to one of the dungeon cells where a prisoner sits.");
+      printf("The prisoner looks up at you. You ask what his name is.\n\"Luca, not that it's any of your business.\"\nRude.");
+      printf("\"Why are you here?\"\n\"I stole 5 beers from the local tavern, not that it's any of your business.\"\nHuh, he sure does talk a lot for someone who thinks it's no one's business...\n");
       return 2;
     }
   }
@@ -62,11 +58,16 @@ int kingdom1(){
       return 2;
     }
     else if (throne_choice == 1){
-      printf("TEXT");
+      printf("You walk over to the court jester.\nHe looks at you blankly before breaking into a dance unannounced. You watch as he trips on his long shoes and clambers back to his feet.\n");
+      printf("You clap your hands in pity and force a smile.\n");
       return 2;
     }
     else if (throne_choice == 2){
-      printf("TEXT");
+      printf("You approach her Majesty at her throne and bow.\nThe court jester comes over and stands arm in arm with Tiffany.\nYou weren't aware that royals fratenized with court jesters.\n");
+      printf("\"Welcome to my kingdom! I hope you have been enjoying your time here.\"\n");
+      if (visited_gala == false){
+        printf("\"There is a gala that's been going on in Nick's Kingdom. We host the grandest parties in the land, I'm about to go there myself. You should definitely check it out!\"\n");
+      }      
       return 2;
     }
   }
@@ -93,4 +94,5 @@ int kingdom1(){
   else if(choice == 0){
     return 0;
   }
+}
 }
