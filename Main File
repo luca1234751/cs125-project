@@ -18,6 +18,7 @@ int errorCheck(int a, int b, int j){
 }
 
 int currency = 100;
+bool visited_gala = false;
 
 int i;
 char printLine[200];
