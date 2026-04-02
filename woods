@@ -59,8 +59,8 @@ int woods(){
     printf("You chose to explore a different Land.\nWhere would you like to go?\n");
     sleep(2);
     printf("The Common Land (1)\nTiffany's Kingdom 2 (2)\nNick's Kingdom (3)\nThe Rafferty Kingdom (4)\n");
-    rc = scanf("%d", &choice);
-    errorCheck(rc, &choice, 4);
+    rc = scanf("%d", &explore_choice);
+    explore_choice = errorCheck(rc, &explore_choice, 4);
     if (explore_choice == 1){
       return 1;
     }
