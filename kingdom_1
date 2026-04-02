@@ -6,7 +6,7 @@
 #include "errorCheck.h"
 #include <unistd.h>
 
-int kingdom1(int *x){
+int kingdom1(){
   int choice, rc;
   printf("Welcome to Tiffany's Kingdom!\nGold Coins: %d\n", *x);
   sleep(2);
