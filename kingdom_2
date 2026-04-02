@@ -1,3 +1,79 @@
-int kingdom_2{
-  printf("Welcome to Nick's Kingdom!");
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stdbool.h> 
+#include "errorCheck.h"
+#include <unistd.h>
+
+int kingdom2(){
+  int choice, rc;
+  printf("Welcome to Nick's Kingdom!\nGold Coins: %d\n", *x);
+  sleep(2);
+  printf("Where would you like to go?\nThe Grand Ball Room (1)\nThe Throne Room (2)\nExplore a Different Land (3)\nContinue on your Travels/Leave (0)\n");
+  rc = scanf("%d", &choice);
+  choice = errorCheck(rc, choice, 3);
+  if (choice == 1){
+    int ballroom_choice;
+    printf("Welcome to the Royal Ball Room!\n");
+    sleep(2);
+    printf("Would you like to: \nXX (1)\nXX (2)\nReturn to Nick's Kingdom centre (0)");
+    rc = scanf("%d", &ballroom_choice);
+    ballroom_choice = errorCheck(rc, ballroom_choice, 2);
+    if (ballroom_choice == 0){
+      printf("You chose to return to the kingdom centre.");
+      return 3;
+    }
+    else if (ballroom_choice == 1){
+      printf("TEXT");
+      return 3;
+    }
+    else if (ballroom_choice == 2){
+      printf("TEXT");
+      return 3;
+    }
+  }
+  else if (choice == 2){
+    int throne_choice;
+    printf("Welcome to the Throne Room!\n"); 
+    sleep(2);
+    printf("Would you like to: \nXX (1)\nApproach his Majesty Nick Logan (2)\nReturn to Nick's Kingdom centre (0)");
+    rc = scanf("%d", &throne_choice);
+    throne_choice = errorCheck(rc, throne_choice, 2);
+    if (throne_choice == 0){
+      printf("You chose to return to the kingdom centre.");
+      return 3;
+    }
+    else if (throne_choice == 1){
+      printf("TEXT");
+      return 3;
+    }
+    else if (throne_choice == 2){
+      printf("TEXT");
+      return 3;
+    }
+  }
+  else if (choice == 3){
+    int explore_choice;
+    printf("You chose to explore a different Land.\nWhere would you like to go?\n");
+    sleep(2);
+    printf("The Common Land (1)\nTiffany's Kingdom 2 (2)\nThe Rafferty Kingdom (3)\nThe Woods (4)\n");
+    rc = scanf("%d", &explore_choice);
+    explore_choice = errorCheck(rc, &explore_choice, 4);
+    if (explore_choice == 1){
+      return 1;
+    }
+    if (explore_choice == 2){
+      return 2;
+    }
+    if (explore_choice == 3){
+      return 4;
+    }
+    if (explore_choice == 4){
+      return 5;
+    }
+  }
+  else if(choice == 0){
+    return 0;
+  }
 }
