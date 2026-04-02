@@ -41,11 +41,19 @@ int home(){
     }
     else if (bakery_choice == 2){
       printf("You chose to talk to the Bakery Helper.\nYou walk up to the Bakery Helper and say Hello\n");
-      sleep(1)
+      sleep(1);
       printf("She says: \nHello, my name is Elyse! I hope you are doing well! Doesn't the bread here smell so good?\nIf you haven't yet bought any, I would highly recommend!\n");
-      sleep(1)
-      printf("\nShe seems to be a bit sad.
-\nLet's head back to the Common Place and explore some more.\n");
+      sleep(1);
+      printf("\nShe seems to be a bit sad. You ask her why.\n");
+      sleep(1);
+      printf("Oh, have you heard about the Gala going on this week?\nIt's in Nick's kingdom and I want to go so bad!\nI even heard the the Great Cam will be playing!\n");
+      sleep(1);
+      printf("Sales have been slow here in the bakery, and Dillon hasn't gathered enough money for such a luxury as the Gala.\nI wish I could go, but I am needed here.\nIf you can you should definitely go.\n");
+      sleep(1);
+      printf("Anyways, I have to get back to work. Nice talking to you and safe travels!\n");
+      sleep(1);
+      printf("Let's head back to the Common Place and explore some more.\n");
+      sleep(2);
       return 1;
     }
   }
@@ -84,15 +92,15 @@ int home(){
     }
     else if (tavern_choice == 2){
       printf("You chose to talk to the Squires David and Trevor.\nYou walk up to the Squires and say Hello\nThey respond: Hello there. Have you heard the latest news?\n");
-      sleep(1)
+      sleep(1);
       printf("Our group leader tried to steal some beer from the Tavern.\nNo one messes with Sophie!\nHe was caught and ust thrown in prison.\n");
-      sleep(1)
+      sleep(1);
       printf("Honestly, this works great for us! Luca and the crew were bad news anyways.\nNow we can truly pursue our Squirehood!\nBecoming Knights has always been our dream!\n");
-      sleep(1)
+      sleep(1);
       printf("The Nathan's are great teachers! You should meet them if you can!\nWe think they are in the Rafferty Kingdom.\nGood luck with the rest of your travels!");
-      sleep(1)
+      sleep(1);
       printf("Let's head back to the Common Place and explore some more.\n");
-      sleep(2)
+      sleep(2);
       return 1;
     }
   }
