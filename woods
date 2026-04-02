@@ -8,7 +8,7 @@
 
 int woods(){
   int choice, rc;
-  printf("Welcome to the woods!\nGold Coins: %d\n", x);
+  printf("Welcome to the woods!\nGold Coins: %d\n", currency);
   printf("You have found a map conviniently placed by a log!!\nThe map shows you different areas of the woods and places to explore... MORE TEXT");
   sleep(2);
   printf("Where would you like to go?\nMia S's Apothecary (1)\nNic's Wizard Tower (2)\nExplore a Different Land (3)\nContinue on your Travels/Leave (0)\n");
