@@ -55,7 +55,7 @@ int home(){
     printf("You got lucky this time. The bouncer Ben lets you inside.\n");
     printf("The place is crowded.\n");
     sleep(2);
-    printf("Would you like to: \nBuy a drink (1)\nTalk to _____ (2)\nReturn to the Common Place (0)");
+    printf("Would you like to: \nBuy a drink (1)\nTalk to the Squires David and Trevor (2)\nReturn to the Common Place (0)");
     rc = scanf("%d", &tavern_choice);
     tavern_choice = errorCheck(rc, tavern_choice, 2);
     if (tavern_choice == 0){
@@ -78,7 +78,16 @@ int home(){
       }
     }
     else if (tavern_choice == 2){
-      printf("You chose to talk to _______.\n______dialogue______\nLet's head back to the Common Place and explore some more.\n");
+      printf("You chose to talk to the Squires David and Trevor.\nYou walk up to the Squires and say Hello\nThey respond: Hello there. Have you heard the latest news?\n");
+      sleep(1)
+      printf("Our group leader tried to steal some beer from the Tavern.\nNo one messes with Sophie!\nHe was caught and ust thrown in prison.\n");
+      sleep(1)
+      printf("Honestly, this works great for us! Luca and the crew were bad news anyways.\nNow we can truly pursue our Squirehood!\nBecoming Knights has always been our dream!\n");
+      sleep(1)
+      printf("The Nathan's are great teachers! You should meet them if you can!\nWe think they are in the Rafferty Kingdom.\nGood luck with the rest of your travels!");
+      sleep(1)
+      printf("Let's head back to the Common Place and explore some more.\n");
+      sleep(2)
       return 1;
     }
   }
