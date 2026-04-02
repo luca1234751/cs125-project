@@ -8,7 +8,7 @@
 
 int home(){
   int choice, rc;
-  printf("Welcome to the Common Place!\nGold Coins: %d\n", x);
+  printf("Welcome to the Common Place!\nGold Coins: %d\n", currency);
   sleep(2);
   printf("Where would you like to go?\nDillon's Bakery (1)\nSophie's Tavern (2)\nCarlos's Blacksmith (3)\nExplore a Different Land (4)\nContinue on your Travels/Leave (0)\n");
   rc = scanf("%d", &choice);
@@ -31,7 +31,7 @@ int home(){
       buy_bread = errorCheck(rc, buy_bread, 1);
       if (buy_bread == 1){
         printf("That Bread was delicious!\nLet's head back to the Common Place and explore some more.\n");
-        x-=15;
+        currency-=15;
         return 1;
       }
       else if (buy_bread == 0){
@@ -69,7 +69,7 @@ int home(){
       buy_beer = errorCheck(rc, buy_beer, 1);
       if (buy_beer == 1){
         printf("That beer was delicious!\nLet's head back to the Common Place and explore some more.\n");
-        x-=30;
+        currency-=30;
         return 1;
       }
       else if (buy_beer == 0){
@@ -112,13 +112,13 @@ int home(){
       if (buy_weapon == 1){
         printf("Thank you Carlos. Now you are prepared for Battle!\nLet's head back to the Common Place and explore some more.\n");
         if (weapon_choice == 1){
-          x-=55;
+          currency-=55;
         }
         else if (weapon_choice == 2){
-          x-=50;
+          currency-=50;
         }
         else if (weapon_choice == 3){
-          x-=45;
+          currency-=45;
         }
         return 1;
       }
