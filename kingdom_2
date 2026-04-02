@@ -16,6 +16,7 @@ int kingdom2(){
   if (choice == 1){
     int ballroom_choice;
     printf("Welcome to the Royal Ball Room!\n");
+    visited_gala = true;
     sleep(2);
     printf("Would you like to: \nXX (1)\nXX (2)\nReturn to Nick's Kingdom centre (0)");
     rc = scanf("%d", &ballroom_choice);
@@ -76,4 +77,5 @@ int kingdom2(){
   else if(choice == 0){
     return 0;
   }
+}
 }
