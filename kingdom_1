@@ -9,7 +9,13 @@
 int kingdom1(){
   int choice, rc;
   printf("Welcome to Tiffany's Kingdom!\nGold Coins: %d\n", currency);
-  
+  FILE* art = fopen("art.txt","r");
+  for(i=0; i<22; i++){
+    fgets(printLine, 200, art);
+    printf("%s", printLine);
+  }
+  printf("\n");
+  fclose(art);
   sleep(2);
   printf("Where would you like to go?\nThe Dungeon (1)\nThe Throne Room (2)\nExplore a Different Land (3)\nContinue on your Travels/Leave (0)\n");
   rc = scanf("%d", &choice);
@@ -17,6 +23,16 @@ int kingdom1(){
   if (choice == 1){
     int dungeon_choice;
     printf("Welcome to the Royal Dungeon!\n");
+    FILE* art = fopen("art.txt","r");
+    for(i=0; i<=106; i++){
+      fgets(printLine, 200, art);
+    }
+    for(i=107; i<=128; i++){
+      fgets(printLine, 200, art);
+      printf("%s", printLine);
+    }
+    printf("\n");
+    fclose(art);
     sleep(2);
     printf("Would you like to: \nSpeak to the Dungeon Master (1)\nSpeak to the prisoner (2)\nReturn to Tiffany's Kingdom centre (0)");
     rc = scanf("%d", &dungeon_choice);
