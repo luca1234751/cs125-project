@@ -27,6 +27,14 @@ int woods(){
   if (choice == 1){
     int apothecary_choice;
     printf("Welcome to Mia S's Apothecary!\n"); 
+    FILE* art = fopen("art.txt","r");
+    for(i=0; i<=245; i++){
+      fgets(printLine, 200, art);
+    }
+    for(i=245; i<=255; i++){
+      fgets(printLine, 200, art);
+      printf("\033[31m%s\033[0m", printLine);
+    }
     sleep(2);
     printf("Would you like to: \nBrew a potion (1)\nBuy a cursed object (2)\nReturn to the woods (0)");
     rc = scanf("%d", &apothecary_choice);
