@@ -55,6 +55,8 @@ int kingdom2(){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
+    printf("\n");
+    fclose(art);
     sleep(2);
     printf("Would you like to: \nXX (1)\nApproach his Majesty Nick Logan (2)\nReturn to Nick's Kingdom centre (0)");
     rc = scanf("%d", &throne_choice);
