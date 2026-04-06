@@ -131,7 +131,7 @@ int home(){
     for(i=0; i<=311; i++){
       fgets(printLine, 200, art);
     }
-    for(i=311; i<=336 i++){
+    for(i=311; i<=336; i++){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
