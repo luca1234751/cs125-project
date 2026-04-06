@@ -16,6 +16,16 @@ int home(){
   if (choice == 1){
     int bakery_choice;
     printf("You chose to go to Dillon's Bakery.\nIt smells delicious!\n"); 
+    FILE* art = fopen("art.txt","r");
+    for(i=0; i<=300; i++){
+      fgets(printLine, 200, art);
+    }
+    for(i=300; i<=311; i++){
+      fgets(printLine, 200, art);
+      printf("%s", printLine);
+    }
+    printf("\n");
+    fclose(art);
     sleep(2);
     printf("Would you like to: \nBuy some bread (1)\nTalk to the Bakery Helper (2)\nReturn to the Common Place (0)\n");
     rc = scanf("%d", &bakery_choice);
