@@ -10,10 +10,10 @@ int woods(){
   int choice, rc;
   printf("Welcome to the woods!\nGold Coins: %d\n", currency);
   FILE* art = fopen("art.txt","r");
-  for(i=0; i<=77; i++){
+  for(i=0; i<=76; i++){
     fgets(printLine, 200, art);
   }
-  for(i=77; i<=107; i++){
+  for(i=76; i<106; i++){
     fgets(printLine, 200, art);
     printf("%s", printLine);
   }
@@ -28,10 +28,10 @@ int woods(){
     int apothecary_choice;
     printf("Welcome to Mia S's Apothecary!\n"); 
     FILE* art = fopen("art.txt","r");
-    for(i=0; i<=245; i++){
+    for(i=0; i<=244; i++){
       fgets(printLine, 200, art);
     }
-    for(i=245; i<=255; i++){
+    for(i=244; i<254; i++){
       fgets(printLine, 200, art);
       printf("\033[31m%s\033[0m", printLine);
     }
@@ -56,10 +56,10 @@ int woods(){
     int tower_choice;
     printf("Welcome to Nic's Wizard Tower!\n"); 
     FILE* art = fopen("art.txt","r");
-    for(i=0; i<=255; i++){
+    for(i=0; i<=254; i++){
       fgets(printLine, 200, art);
     }
-    for(i=255; i<=300; i++){
+    for(i=254; i<299; i++){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
