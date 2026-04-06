@@ -8,16 +8,16 @@
 
 int kingdom3(){
   int choice, rc;
-  printf("Welcome to The Rafferty Kingdom!\nGold Coins: %d\n", currency);
+  printf("Welcome to The Rafferty Kingdom!\nGold Coins: %d\n\n", currency);
   FILE* art = fopen("art.txt","r");
-  for(i=0; i<=41; i++){
+  for(i = 0; i <= 41; i++){
     fgets(printLine, 200, art);
   }
-  for(i=41; i<54; i++){
+  for(i = 41; i < 54; i++){
     fgets(printLine, 200, art);
     printf("%s", printLine);
   }
-  printf("\n");
+  printf("\n\n");
   fclose(art);
   sleep(2);
   printf("Where would you like to go?\nTaryn's Farm (1)\nThe Throne Room (2)\nExplore a Different Land (3)\nContinue on your Travels/Leave (0)\n");
@@ -25,29 +25,29 @@ int kingdom3(){
   choice = errorCheck(rc, choice, 3);
   if (choice == 1){
     int animal_choice;
-    printf("Welcome to the farmlands!\n");
+    printf("\033[34mWelcome to the farmlands!\n");
     sleep(1);
-    printf("Taryn greets you joyfully.\n");
+    printf("\033[0mTaryn greets you joyfully.\n");
     sleep(1);
     printf("You look out across the rolling hills, fields filled with bountiful harvests cover the land.\nAnimals graze freely and happily in the warm sun.\n");
     FILE* art = fopen("art.txt","r");
-    for(i=0; i<=211; i++){
+    for(i = 0; i <= 211; i++){
       fgets(printLine, 200, art);
     }
-    for(i=211; i<244; i++){
+    for(i = 211; i < 244; i++){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
-    printf("\n");
+    printf("\n\n");
     fclose(art);
     sleep(1);
     printf("You see an area that you would like to explore...\n");
     sleep(2);
-    printf("The duck pond (1)\nThe corn fields (2)\nThe horse stables (3)\n Return to the kingdom center (0)");
+    printf("The duck pond (1)\nThe corn fields (2)\nReturn to the kingdom center (0)\n");
     rc = scanf("%d", &animal_choice);
-    animal_choice = errorCheck(rc, animal_choice, 5);
+    animal_choice = errorCheck(rc, animal_choice, 2);
     if (animal_choice == 0){
-      printf("You chose to return to the kingdom center.");
+      printf("You chose to return to the kingdom center.\n\n");
       return 4;
     }
     else if (animal_choice == 1){
@@ -57,14 +57,14 @@ int kingdom3(){
       sleep(1);
       printf("You run out of crumbs and notice one of the ducks begins nipping at your shoe...\nAnother joins in...\nThen another...\n");
       sleep(1);
-      printf("You run back to the kingdom center, Taryn laughing as a small hoard of ducks chases you looking for food.\n");
+      printf("You run back to the kingdom center, Taryn laughing as a small hoard of ducks chases you looking for food.\n\n");
       return 4;
     }
     else if (animal_choice == 2){
       int corn_maze, dead_end, maze_choice, found_exit = 0;
       printf("You look over at the corn fields and decide to go explore.\n");
       sleep(1);
-      printf("As you get closer, you notice the entrance to a corn maze.\nMaybe I shouldn't go in there...\n");
+      printf("As you get closer, you notice the entrance to a corn maze.\nIt looks like you could lost in there...\n");
       sleep(2);
       printf("Continue (1)\nReturn to the kingdom center (2)\n");
       rc = scanf("%d", &corn_maze);
@@ -98,16 +98,12 @@ int kingdom3(){
             }
           }
         }
-        printf("You make it to the end of the maze and find 20 gold coins!\nYou return to the kingdom center.\n");
-        currency += 20;
+        printf("You make it to the end of the maze and find 50 gold coins!\nYou return to the kingdom center.\n\n");
+        currency += 50;
       }
       else if (corn_maze == 2){
-        printf("Maybe next time... You return to the kingdom center.\n");
+        printf("Maybe next time... You return to the kingdom center.\n\n");
       }
-      return 4;
-    }
-    else if (animal_choice == 3){
-      printf("TEXT");
       return 4;
     }
   }
@@ -115,25 +111,25 @@ int kingdom3(){
     int throne_choice;
     printf("You enter the throne room. King Rafferty sits proudly upon his throne.\n"); 
     FILE* art = fopen("art.txt", "r");
-    for(i=0; i<129; i++){
+    for(i = 0; i <= 129; i++){
       fgets(printLine, 200, art);
     }
-    for(i=129; i<186;){
+    for(i = 129; i < 186; i++){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
-    printf("\n");
+    printf("\n\n");
     fclose(art);
     sleep(1);
     printf("The walls are adorned with art, sculptures populate the corners, and the walls are lined with jewels and gold.\n");
     sleep(1);
     printf("The son of King Rafferty, heir to the throne, stands beside his father.\n");
     sleep(2);
-    printf("Would you like to: \nSpeak to the heir (1)\nReturn to the kingdom center (0)");
+    printf("Would you like to: \nSpeak to the heir (1)\nReturn to the kingdom center (0)\n");
     rc = scanf("%d", &throne_choice);
     throne_choice = errorCheck(rc, throne_choice, 1);
     if (throne_choice == 0){
-      printf("You chose to return to the kingdom center.");
+      printf("You chose to return to the kingdom center.\n\n");
       return 4;
     }
     else if (throne_choice == 1){
@@ -141,17 +137,17 @@ int kingdom3(){
       sleep(1);
       printf("He smiles and waves at you.\n");
       sleep(1);
-      printf("Nice to meet you! How have you enjoyed your time here so far?\n");
+      printf("\033[34mNice to meet you! How have you enjoyed your time here so far?\n");
       sleep(1);
-      printf("It's been great, thank you!\n");
+      printf("\033[0mIt's been great, thank you!\n");
       sleep(1);
-      printf("I'm glad to hear! Please take this gift as a token of appreaciation...\n");
+      printf("\033[34mI'm glad to hear! Please take this gift as a token of appreaciation...\n");
       sleep(1);
-      printf("Tyler hands you a round disk-shaped object...\n");
+      printf("\033[0mTyler hands you a round disk-shaped object...\n");
       sleep(1);
-      printf("It's a frisbee!\n");
+      printf("\033[34mIt's a frisbee!\n");
       sleep(1);
-      printf("Cool.\nYou thank him and return to the kingdom center.\n");
+      printf("\033[0mCool!\nYou thank him and return to the kingdom center.\n\n");
       return 4;
     }
   }
