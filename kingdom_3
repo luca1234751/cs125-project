@@ -9,6 +9,16 @@
 int kingdom3(){
   int choice, rc;
   printf("Welcome to The Rafferty Kingdom!\nGold Coins: %d\n", currency);
+  FILE* art = fopen("art.txt","r");
+  for(i=0; i<=42; i++){
+    fgets(printLine, 200, art);
+  }
+  for(i=42; i<=55; i++){
+    fgets(printLine, 200, art);
+    printf("%s", printLine);
+  }
+  printf("\n");
+  fclose(art);
   sleep(2);
   printf("Where would you like to go?\nTaryn's Animal Fields (1)\nThe Throne Room (2)\nExplore a Different Land (3)\nContinue on your Travels/Leave (0)\n");
   rc = scanf("%d", &choice);
