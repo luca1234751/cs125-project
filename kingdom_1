@@ -66,10 +66,10 @@ int kingdom1(){
     int throne_choice;
     printf("Welcome to the Throne Room!\n"); 
     FILE* art = fopen("art.txt", "r");
-    for(i=0; i<130; i++){
+    for(i=0; i<129; i++){
       fgets(printLine, 200, art);
     }
-    for(i=130; i<=187;){
+    for(i=129; i<186;){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
