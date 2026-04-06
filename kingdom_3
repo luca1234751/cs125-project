@@ -46,6 +46,16 @@ int kingdom3(){
   else if (choice == 2){
     int throne_choice;
     printf("Welcome to the Throne Room!\n"); 
+    FILE* art = fopen("art.txt", "r");
+    for(i=0; i<130; i++){
+      fgets(printLine, 200, art);
+    }
+    for(i=130; i<=187;){
+      fgets(printLine, 200, art);
+      printf("%s", printLine);
+    }
+    printf("\n");
+    flcose(art);
     sleep(2);
     printf("Would you like to: \nXX (1)\nApproach his Majesty Mr. Rafferty (2)\nReturn to The Rafferty Kingdom centre (0)");
     rc = scanf("%d", &throne_choice);
