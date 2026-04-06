@@ -55,6 +55,14 @@ int woods(){
   else if (choice == 2){
     int tower_choice;
     printf("Welcome to Nic's Wizard Tower!\n"); 
+    FILE* art = fopen("art.txt","r");
+    for(i=0; i<=255; i++){
+      fgets(printLine, 200, art);
+    }
+    for(i=255; i<=300; i++){
+      fgets(printLine, 200, art);
+      printf("%s", printLine);
+    }
     sleep(2);
     printf("Would you like to: \nHear a prophecy (1)\nRequest a spell to be cast (2)\nReturn to the woods (0)");
     rc = scanf("%d", &tower_choice);
