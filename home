@@ -70,10 +70,10 @@ int home(){
   else if (choice == 2){
     int bounced, tavern_choice;
     FILE* art = fopen("art.txt","r");
-    for(i=0; i<=55; i++){
+    for(i=0; i<=54; i++){
       fgets(printLine, 200, art);
     }
-    for(i=55; i<=77; i++){
+    for(i=54; i<76; i++){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
@@ -128,10 +128,10 @@ int home(){
     int buy_blacksmith, weapon_choice, buy_weapon;
     printf("You chose to go to Carlos's Blacksmith.\n");
     FILE* art = fopen("art.txt","r");
-    for(i=0; i<=311; i++){
+    for(i=0; i<=310; i++){
       fgets(printLine, 200, art);
     }
-    for(i=311; i<=336; i++){
+    for(i=310; i<335; i++){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
