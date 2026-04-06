@@ -10,10 +10,10 @@ int kingdom2(){
   int choice, rc;
   printf("Welcome to Nick's Kingdom!\nGold Coins: %d\n", currency);
   FILE* art = fopen("art.txt","r");
-  for(i=0; i<=23; i++){
+  for(i=0; i<=22; i++){
     fgets(printLine, 200, art);
   }
-  for(i=23; i<=41; i++){
+  for(i=22; i<=40; i++){
     fgets(printLine, 200, art);
     printf("%s", printLine);
   }
@@ -27,10 +27,10 @@ int kingdom2(){
     int ballroom_choice;
     printf("Welcome to the Royal Ball Room!\n");
     FILE* art = fopen("art.txt","r");
-    for(i=0; i<=188; i++){
+    for(i=0; i<=187; i++){
       fgets(printLine, 200, art);
     }
-    for(i=188; i<=211; i++){
+    for(i=187; i<210; i++){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
@@ -58,10 +58,10 @@ int kingdom2(){
     int throne_choice;
     printf("Welcome to the Throne Room!\n"); 
     FILE* art = fopen("art.txt", "r");
-    for(i=0; i<130; i++){
+    for(i=0; i<129; i++){
       fgets(printLine, 200, art);
     }
-    for(i=130; i<=187;){
+    for(i=129; i<186;){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
