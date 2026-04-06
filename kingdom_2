@@ -108,4 +108,3 @@ int kingdom2(){
     return 0;
   }
 }
-}
