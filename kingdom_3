@@ -26,6 +26,16 @@ int kingdom3(){
   if (choice == 1){
     int animal_choice;
     printf("Welcome to the Animal Fields!\n");
+    FILE* art = fopen("art.txt","r");
+    for(i=0; i<=212; i++){
+      fgets(printLine, 200, art);
+    }
+    for(i=212; i<=245; i++){
+      fgets(printLine, 200, art);
+      printf("%s", printLine);
+    }
+    printf("\n");
+    fclose(art);
     sleep(2);
     printf("Would you like to: \nXX (1)\nXX (2)\nReturn to The Rafferty Kingdom centre (0)");
     rc = scanf("%d", &animal_choice);
