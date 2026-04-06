@@ -26,6 +26,16 @@ int kingdom2(){
   if (choice == 1){
     int ballroom_choice;
     printf("Welcome to the Royal Ball Room!\n");
+    FILE* art = fopen("art.txt","r");
+    for(i=0; i<=188; i++){
+      fgets(printLine, 200, art);
+    }
+    for(i=188; i<=211; i++){
+      fgets(printLine, 200, art);
+      printf("%s", printLine);
+    }
+    printf("\n");
+    fclose(art);
     visited_gala = true;
     sleep(2);
     printf("Would you like to: \nXX (1)\nXX (2)\nReturn to Nick's Kingdom centre (0)");
