@@ -6,5 +6,5 @@ int kingdom3();
 int woods();
 extern int currency;
 extern int i;
-extern char printLine;
+extern char printLine[200];
 extern bool visited_gala;
