@@ -8,95 +8,93 @@
 
 int woods(){
   int choice, rc;
-  printf("Welcome to the woods!\nGold Coins: %d\n", currency);
+  printf("Welcome to the woods!\nGold Coins: %d\n\n", currency);
+  sleep(1);
+  printf("You have found a map conviniently placed by a log!\nThe map shows you different areas of the woods and places to explore...\n\n");
   FILE* art = fopen("art.txt","r");
-  for(i=0; i<=76; i++){
+  for(i = 0; i <= 76; i++){
     fgets(printLine, 200, art);
   }
-  for(i=76; i<106; i++){
+  for(i = 76; i < 106; i++){
     fgets(printLine, 200, art);
     printf("%s", printLine);
   }
-  printf("\n");
+  printf("\n\n");
   fclose(art);
-  sleep(1);
-  printf("You have found a map conviniently placed by a log!!\nThe map shows you different areas of the woods and places to explore... MORE TEXT");
   sleep(2);
   printf("Where would you like to go?\nMia S's Apothecary (1)\nNic's Wizard Tower (2)\nExplore a Different Land (3)\nContinue on your Travels/Leave (0)\n");
   rc = scanf("%d", &choice);
   choice = errorCheck(rc, choice, 3);
   if (choice == 1){
     int apothecary_choice;
-    printf("Welcome traveller...\n"); 
+    printf("\033[34mWelcome traveller...\n"); 
     sleep(1);
-    printf("Mia S, the witch doctor, greets you.\n");
+    printf("\033[0mMia S, the witch doctor, greets you.\n");
     sleep(1);
-    printf("The room is dark and dusty with only a small, overgrown window looking out to the dense woods. Bookshelves line the walls and a cat lays on the windowsill, purring.\n");
-    printf("Welcome to Mia S's Apothecary!\n"); 
+    printf("The room is dark and dusty with only a small, overgrown window looking out to the dense woods. Bookshelves line the walls and a cat lays on the windowsill, purring.\n\n");
     FILE* art = fopen("art.txt","r");
-    for(i=0; i<=244; i++){
+    for(i = 0; i <= 244; i++){
       fgets(printLine, 200, art);
     }
-    for(i=244; i<254; i++){
+    for(i = 244; i < 254; i++){
       fgets(printLine, 200, art);
       printf("\033[31m%s\033[0m", printLine);
     }
-    printf("\n");
+    printf("\n\n");
     fclose(art);
     sleep(2);
-    printf("Would you like to: \nBrew a potion (1)\nBuy a cursed object (2)\nReturn to the woods (0)");
+    printf("Would you like to: \nBrew a potion (1)\nBuy a cursed object (2)\nReturn to the woods (0)\n");
     rc = scanf("%d", &apothecary_choice);
     apothecary_choice = errorCheck(rc, apothecary_choice, 2);
     if (apothecary_choice == 0){
-      printf("You chose to return to the woods.");
+      printf("You chose to return to the woods.\n\n");
       return 5;
     }
     else if (apothecary_choice == 1){
       int potion;
       printf("You ask the witch doctor to brew a potion.\n");
       sleep(1);
-      printf("Of course... A potion is free of charge, but at your own risk...\n");
+      printf("\033[34mOf course... A potion is free of charge, but at your own risk...\n");
       sleep(1);
-      printf("She walks over to her cauldron slowly and gestures to the ingredients beside her.\n");
+      printf("\033[0mShe walks over to her cauldron slowly and gestures to the ingredients beside her.\n");
       sleep(1);
-      printf("Take your pick...\n");
+      printf("\033[34mTake your pick...\n");
       sleep(2);
-      printf("Mushrooms + feathers (1)\nBerries + frog slime (2)\nHerbs + a strange blue stone (3)\n");
+      printf("\033[0mMushrooms + feathers (1)\nBerries + frog slime (2)\nHerbs + a strange blue stone (3)\n");
       rc = scanf("%d", &potion);
       potion = errorCheck(rc, potion, 3);
-      printf("Very interesting indeed...\n");
+      printf("\033[34mVery interesting indeed...\033[0m\n");
       sleep(1);
       printf("She adds your ingredients and begin to stir the pot as the potion bubbles and deepens in colour...\n");
       printf("She fills a vial with the potion and hands it to you.\n");
       sleep(1);
       printf("What sort of potion is it?\n");
       if (potion == 1){
-        printf("A healing potion. Use it wisely...\n");
+        printf("\033[34mA healing potion. Use it wisely...\033[0m\n\n");
       }
       else if (potion == 2){
-        printf("A potion of strength. Use it with caution...\n");
+        printf("\033[34mA potion of strength. Use it with caution...\033[0m\n\n");
       }
       else if (potion == 3){
-        printf("She looks at you...\n");
+        printf("\033[34mShe looks at you...\n");
         sleep(1);
         printf("It is up to you whether you would like to find out.\n");
         sleep(1);
-        printf("You put the vial carefully in your pocket. Perhaps this is best kept as a trinket...\n");
+        printf("\033[0mYou put the vial carefully in your pocket. Perhaps this is best kept as a trinket...\n\n");
       }
       return 5;
     }
     else if (apothecary_choice == 2){
       int cursed_object;
-      printf("You are drawn to a table that lies in the corner, an array of peculiar items lay upon it...\n ");
+      printf("You are drawn to a table that lies in the corner, an array of peculiar items lay upon it...\n");
       sleep(1);
-      printf("Take your pick, and choose wisely... Each item is 15 gold coins.\n");
+      printf("\033[34mTake your pick, and choose wisely... Each item is 25 gold coins.\n");
       sleep(2);
-      printf("The amulet (1)\nAn old tarnished ring (2)\nAn untitled book (3)\n");
+      printf("\033[0mThe amulet (1)\nAn old tarnished ring (2)\nAn untitled book (3)\n");
       rc = scanf("%d", &cursed_object);
       cursed_object = errorCheck(rc, cursed_object, 3);
       if (cursed_object == 1){
         printf("You pick the amulet up and place it around your neck.\n");
-        currency -= 15;
       }
       else if (cursed_object == 2){
         printf("You take the ring and place it in your pocket.\n");
@@ -106,50 +104,50 @@ int woods(){
         sleep(1);
         printf("The pages are blank. Strange...\n");
       }
-      printf("You thank the witch doctor and return to the woods.\n");
-      currency -= 15;
+      printf("You thank the witch doctor and return to the woods.\n\n");
+      currency -= 25;
       return 5;
     }
   }
   else if (choice == 2){
     int tower_choice;
-    printf("You come across a tall, stone tower as you explore the woods.\n");
+    printf("You come across a tall, stone tower as you explore the woods.\n\n");
     FILE* art = fopen("art.txt","r");
-    for(i=0; i<=254; i++){
+    for(i = 0; i <= 254; i++){
       fgets(printLine, 200, art);
     }
-    for(i=254; i<299; i++){
+    for(i = 254; i < 299; i++){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
-    printf("\n");
+    printf("\n\n");
     fclose(art);
-    sleep(1);
+    sleep(2);
     printf("You approach the tower, opening the heavy door to a spiral staircase.\nYou begin to walk up the stairs...\n");
     sleep(1);
     printf("You reach the top of the stairs and see a man draped in a long cloak.\n");
     sleep(1);
-    printf("Hello there traveller... it is rare to see people out in these woods.\n");
+    printf("\033[34mHello there traveller... it is rare to see people out in these woods.\n");
     sleep(1);
     printf("What can I do for you?\n");
     sleep(2);
-    printf("Hear a prophecy (1)\nRequest a spell to be cast (2)\nReturn to the woods (0)");
+    printf("\033[0mHear a prophecy (1)\nRequest a spell to be cast (2)\nReturn to the woods (0)\n");
     rc = scanf("%d", &tower_choice);
     tower_choice = errorCheck(rc, tower_choice, 2);
     if (tower_choice == 0){
-      printf("You chose to return to the woods.");
+      printf("You chose to return to the woods.\n\n");
       return 5;
     }
     else if (tower_choice == 1){
-      printf("A prophecy... of course!\n");
+      printf("\033[34mA prophecy... of course!\n");
       sleep(1);
       printf("My senses are telling me that there is much ahead of you... very soon, you will encounter...\n");
       sleep(1);
       printf("Something!\n");
       sleep(1);
-      printf("You pause, looking at him confused.\n What does that even mean...\n");
+      printf("\033[0mYou pause, looking at him confused.\n What does that even mean...\n");
       sleep(1);
-      printf("You thank him and return to the woods.\n");
+      printf("You thank him and return to the woods.\n\n");
       return 5;
     }
     else if (tower_choice == 2){
@@ -159,11 +157,11 @@ int woods(){
       sleep(1);
       printf("Before you have a chance to ask what spell, he starts speaking in rhymes...\n");
       sleep(1);
-      printf("You take a step back as he finished the incantation and then all of a sudden...\n");
+      printf("You take a step back as he finishes the incantation and then all of a sudden!\n");
       sleep(1);
       printf("Nothing happens...\n");
       sleep(1);
-      printf("You smile politely, slightly confused, slightly concerned, and thank him.\nYou return to the woods.\n");
+      printf("You smile politely, slightly confused, slightly concerned, and thank him.\nYou return to the woods.\n\n");
       return 5;
     }
   }
