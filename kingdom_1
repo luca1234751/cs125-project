@@ -73,6 +73,8 @@ int kingdom1(){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
+    printf("\n");
+    flcose(art);
     sleep(2);
     printf("Would you like to: \nSpeak to the court jester (1)\nApproach her Majesty Tiffany Terry (2)\nReturn to Tiffany's Kingdom centre (0)");
     rc = scanf("%d", &throne_choice);
