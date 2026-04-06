@@ -24,10 +24,10 @@ int kingdom1(){
     int dungeon_choice;
     printf("Welcome to the Royal Dungeon!\n");
     FILE* art = fopen("art.txt","r");
-    for(i=0; i<=106; i++){
+    for(i=0; i<=105; i++){
       fgets(printLine, 200, art);
     }
-    for(i=107; i<=128; i++){
+    for(i=105; i<127; i++){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
