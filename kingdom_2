@@ -20,12 +20,14 @@ int kingdom2(){
   printf("\n");
   fclose(art);
   sleep(2);
-  printf("Where would you like to go?\nThe Grand Ball Room (1)\nThe Throne Room (2)\nExplore a Different Land (3)\nContinue on your Travels/Leave (0)\n");
+  printf("What would you like to do?\nEnter the castle (1)\nExplore a Different Land (2)\nContinue on your Travels/Leave (0)\n");
   rc = scanf("%d", &choice);
-  choice = errorCheck(rc, choice, 3);
+  choice = errorCheck(rc, choice, 2);
   if (choice == 1){
-    int ballroom_choice;
-    printf("Welcome to the Royal Ball Room!\n");
+    int gala_choice;
+    printf("You approach the castle and hear lots of noise and music...\n");
+    sleep(1);
+    printf("A grand gala is being hosted! You excitedly enter the castle and follow a crowd of people into the royal ball room!\n");
     FILE* art = fopen("art.txt","r");
     for(i=0; i<=187; i++){
       fgets(printLine, 200, art);
@@ -38,53 +40,95 @@ int kingdom2(){
     fclose(art);
     visited_gala = true;
     sleep(2);
-    printf("Would you like to: \nXX (1)\nXX (2)\nReturn to Nick's Kingdom centre (0)");
-    rc = scanf("%d", &ballroom_choice);
-    ballroom_choice = errorCheck(rc, ballroom_choice, 2);
-    if (ballroom_choice == 0){
+    printf("Would you like to: \nAsk Cam the entertainer to play a song (1)\nSpeak to the King (2)\nReturn to the kingdom center (0)");
+    rc = scanf("%d", &gala_choice);
+    gala_choice = errorCheck(rc, gala_choice, 2);
+    if (gala_choice == 0){
       printf("You chose to return to the kingdom centre.");
       return 3;
     }
-    else if (ballroom_choice == 1){
-      printf("TEXT");
+    else if (gala_choice == 1){
+      int song;
+      printf("You walk over to Cam, the most renowned musical performer in the lands.\n");
+      sleep(1);
+      printf("You request your favourite song to be played.\n");
+      sleep(1);
+      printf("Of course! It is 40 gold coins to make a song request.\n");
+      sleep(2);
+      printf("Confirm song request (1)\nMaybe next time... (2)\n");
+      rc = scanf("%d", &song);
+      song = errorCheck(rc, song, 2);
+      if (song == 1){
+        printf("Cam begins to play your song. You smile and join the crowd of people on the dance floor until the song is over!\n");
+        currency -= 40;
+      }
+      else if (song == 2){
+        printf("40 gold coins is a lot... You change your mind and head back to the kingdom center.\n");
+      }
       return 3;
     }
-    else if (ballroom_choice == 2){
-      printf("TEXT");
+    else if (gala_choice == 2){
+      int game_choice, card1, card2, guess;
+      printf("You see the King at the card table across the room.\n");
+      sleep(1);
+      printf("You approach politely and introduce yourself.\n");
+      sleep(2);
+      printf("How nice to meet you! Welcome to my kingdom, you have come to visit at a terrific time!\n");
+      sleep(1);
+      printf("Would you like to play a round of this game with me? You must bet 10 gold coins to play.\n");
+      sleep(2);
+      printf("Accept the offer (1)\nPolitely decline (2)\n");
+      rc = scanf("%d", &game_choice);
+      game_choice = errorCheck(rc, game_choice, 2);
+      if (game_choice == 1){
+        printf("Terrific! I will draw a card between 1 and 10. You will guess whether the next card will be higher or lower than my card.\n");
+        sleep(1);
+        printf("If you are correct, you get your gold coins back plus my ten that I bet! If you lose, I keep the winnings.\n");
+        sleep(1);
+        card1 = rand() % 10 + 1;
+        printf("The King draws the first card...\n");
+        sleep(1);
+        printf("It's a %d! Now make your guess:\nHigher (1)\nLower(2)\n", card1);
+        rc = scanf("%d", &guess);
+        guess = errorCheck(rc, guess, 2);
+        card2 = rand() % 10 + 1;
+        printf("You draw the second card, it's a %d...\n", card2);
+        if (guess == 1){
+          if (card2 > card1){
+            printf("Congratulations! You won!\n");
+            currency += 10;
+          }
+          else if (card2 < card1){
+            printf("Uh oh... Better luck next time!\n");
+            currency -= 10;
+          }
+          else if (card1 == card2){
+            printf("It's a tie! Looks like we both get to keep our coins this time!\n");
+          }
+        }
+        else if (guess == 2){
+          if (card1 > card2){
+            printf("Congratulations! You won!\n");
+            currency += 10;
+          }
+          else if (card1 < card2){
+            printf("Uh oh... Better luck next time!\n");
+            currency -= 10;
+          }
+          else if (card1 == card2){
+            printf("It's a tie! Looks like we both get to keep our coins this time!\n");
+          }
+        }
+      }
+      else if (game_choice == 2){
+        printf("That's too bad... Maybe next time!\n");
+        sleep(1);
+        printf("It was nice speaking to you!\n");
+      }
       return 3;
     }
   }
   else if (choice == 2){
-    int throne_choice;
-    printf("Welcome to the Throne Room!\n"); 
-    FILE* art = fopen("art.txt", "r");
-    for(i=0; i<129; i++){
-      fgets(printLine, 200, art);
-    }
-    for(i=129; i<186;){
-      fgets(printLine, 200, art);
-      printf("%s", printLine);
-    }
-    printf("\n");
-    fclose(art);
-    sleep(2);
-    printf("Would you like to: \nXX (1)\nApproach his Majesty Nick Logan (2)\nReturn to Nick's Kingdom centre (0)");
-    rc = scanf("%d", &throne_choice);
-    throne_choice = errorCheck(rc, throne_choice, 2);
-    if (throne_choice == 0){
-      printf("You chose to return to the kingdom centre.");
-      return 3;
-    }
-    else if (throne_choice == 1){
-      printf("TEXT");
-      return 3;
-    }
-    else if (throne_choice == 2){
-      printf("TEXT");
-      return 3;
-    }
-  }
-  else if (choice == 3){
     int explore_choice;
     printf("You chose to explore a different Land.\nWhere would you like to go?\n");
     sleep(2);
