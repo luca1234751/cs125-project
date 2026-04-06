@@ -45,7 +45,7 @@ int main(){
       choice = woods();
     }
   }
-  if (choice = 0){
+  if (choice == 0){
     printf("Thank you for visiting our lands! We hope you enjoyed your time here.\n");
     sleep(1);
     printf("Good luck on the rest of your journey traveller...\n");
