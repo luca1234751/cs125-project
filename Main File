@@ -26,7 +26,7 @@ char printLine[200];
 int main(){
   int choice;
   srand(time(NULL));
-  printf("Welcome message ...");
+  printf("Welcome to the Pioneer Plains! Enjoy freely exploring our vast lands.\n");
   choice = home();
   while (choice != 0){
     if (choice == 1){
@@ -46,7 +46,9 @@ int main(){
     }
   }
   if (choice = 0){
-    printf("Goodbye message ...");
+    printf("Thank you for visiting our lands! We hope you enjoyed your time here.\n");
+    sleep(1);
+    printf("Good luck on the rest of your journey traveller...\n");
     return 0;
   }
   return 0;
