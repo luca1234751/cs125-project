@@ -65,7 +65,7 @@ int kingdom3(){
       printf("%s", printLine);
     }
     printf("\n");
-    flcose(art);
+    fclose(art);
     sleep(2);
     printf("Would you like to: \nXX (1)\nApproach his Majesty Mr. Rafferty (2)\nReturn to The Rafferty Kingdom centre (0)");
     rc = scanf("%d", &throne_choice);
