@@ -121,4 +121,3 @@ int kingdom1(){
     return 0;
   }
 }
-}
