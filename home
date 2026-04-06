@@ -59,6 +59,16 @@ int home(){
   }
   else if (choice == 2){
     int bounced, tavern_choice;
+    FILE* art = fopen("art.txt","r");
+    for(i=0; i<=55; i++){
+      fgets(printLine, 200, art);
+    }
+    for(i=55; i<=77; i++){
+      fgets(printLine, 200, art);
+      printf("%s", printLine);
+    }
+    printf("\n");
+    fclose(art);
     printf("You chose to go to Sophie's Tavern.\nOn the way in, the bouncer Ben walks up to you.\n");
     bounced = rand()%3;
     if (bounced == 1){
