@@ -17,10 +17,10 @@ int home(){
     int bakery_choice;
     printf("You chose to go to Dillon's Bakery.\nIt smells delicious!\n"); 
     FILE* art = fopen("art.txt","r");
-    for(i=0; i<=300; i++){
+    for(i=0; i<=299; i++){
       fgets(printLine, 200, art);
     }
-    for(i=300; i<=311; i++){
+    for(i=299; i<310; i++){
       fgets(printLine, 200, art);
       printf("%s", printLine);
     }
